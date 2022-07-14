@@ -1,0 +1,29 @@
+The license to CP/M and its derivatives was made more free on 2022-07-07.
+The relevant email from Bryan Sparks, below, is quoted from the Unofficial
+CP/M Web Site:
+	http://www.cpm.z80.de/license.html
+
+
+From: Bryan Sparks <*****@drycanyon.com>    Thu, Jul 7, 8:04 AM
+To: Scott Chapman <******@mischko.com>
+
+Hmmm. Well, what you describe wasn't my intent but I get that this was unclear. 
+It was also some time ago.
+
+Not sure how to "officially" clear this up except to modify the original email content 
+removing the constraint to the website/group that was mentioned. So, perhaps, this 
+will suffice:
+
+"Let this paragraph represent a right to use, distribute, modify, enhance, and otherwise 
+make available in a nonexclusive manner CP/M and its derivatives. This right comes from 
+the company, DRDOS, Inc.'s purchase of Digital Research, the company and all assets, 
+dating back to the mid-1990's. DRDOS, Inc. and I, Bryan Sparks, President of DRDOS, 
+Inc. as its representative, is the owner of CP/M and the successor in interest of 
+Digital Research assets."
+
+It's a bit clumsy but this may get the intent cleared and authority upon which it is 
+granted.
+
+Thanks for the email.
+
+Bryan
