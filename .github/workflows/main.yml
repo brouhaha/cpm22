@@ -69,5 +69,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: as.pdf
-        path: doc_EN//as.pdf  
+        path: as.pdf  
   
