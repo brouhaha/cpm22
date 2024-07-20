@@ -23,9 +23,15 @@ jobs:
     - name: install pdflatex
       run: sudo apt-get install texlive-latex-base
 
+    - name: install texlive-fonts-extra
+      run: sudo apt-get install texlive-fonts-extra
+
+    - name: install texlive-fonts-recommended
+      run: sudo apt-get install texlive-fonts-recommended
+
     - name: download AS
       run: wget http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current.tar.gz
-    
+  
     - name: extract AS
       run: tar zxvf asl-current.tar.gz
 
