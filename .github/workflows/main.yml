@@ -20,3 +20,7 @@ jobs:
     - name: extract AS
       run: tar zxvf asl-current.tar.gz
 
+    - name: make AS
+      run: cd asl-current; make
+      
+
