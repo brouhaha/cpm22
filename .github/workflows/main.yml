@@ -60,7 +60,7 @@ jobs:
       run: mkfs.cpm -f cpm86-720 cpm.img
 
     - name: ls
-      run: ls
+      run: ls -lat
 
     - name: bdos artifact
       uses: actions/upload-artifact@v4
