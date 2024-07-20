@@ -29,6 +29,9 @@ jobs:
     - name: install texlive-fonts-recommended
       run: sudo apt-get install texlive-fonts-recommended
 
+    - name: install texlive-latex-extra
+      run: sudo apt-get install texlive-latex-extra
+
     - name: download AS
       run: wget http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current.tar.gz
   
