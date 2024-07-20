@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: install pdflatex
+      run: sudo apt-get install texlive-latex-base
+
     - name: download AS
       run: wget http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current.tar.gz
     
