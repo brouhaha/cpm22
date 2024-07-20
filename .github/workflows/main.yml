@@ -14,7 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: lint
+    - name: download AS
       run: wget http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current.tar.gz
     
+    - name: extract AS
+      run: tar zxvf asl-current.tar.gz
 
