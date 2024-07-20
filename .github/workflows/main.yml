@@ -53,6 +53,12 @@ jobs:
     - name: install cpmtools
       run: sudo apt-get install cpmtools
 
+    - name: make image file
+      run: dd if=/dev/zero of=cpm.img bs=720k count=1
+
+    - name: format image to cpm
+      run: mkfs.cpm -f cpm86-720 cpm.img
+
     - name: bdos artifact
       uses: actions/upload-artifact@v4
       with:
@@ -64,3 +70,10 @@ jobs:
       with:
         name: ccp-44k.p
         path: ccp-44k.p
+
+    - name: cpm.img
+      uses: actions/upload-artifact@v4
+      with:
+        name: cpm.img
+        path: cpm.img
+        
