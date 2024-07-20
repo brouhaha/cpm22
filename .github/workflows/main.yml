@@ -20,7 +20,10 @@ jobs:
     - name: extract AS
       run: tar zxvf asl-current.tar.gz
 
+    - name: copy defs file
+      run: cd asl-current; cp Makefile.def-samples/Makefile.def-i386-unknown-linux2.x.x Makefile.def
+
     - name: make AS
       run: cd asl-current; make
-      
+
 
