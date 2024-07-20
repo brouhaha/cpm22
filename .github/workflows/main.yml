@@ -68,6 +68,6 @@ jobs:
     - name: as.pdf artifact
       uses: actions/upload-artifact@v4
       with:
-        name: doc_EN/as.pdf
-        path: doc_EN/as.pdf  
+        name: as.pdf
+        path: doc_EN//as.pdf  
   
