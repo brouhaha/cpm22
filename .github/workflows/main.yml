@@ -24,6 +24,6 @@ jobs:
       run: cd asl-current; cp Makefile.def-samples/Makefile.def-x86_64-unknown-linux Makefile.def
 
     - name: make AS
-      run: cd asl-current; make
+      run: cd asl-current; make; make install
 
 
