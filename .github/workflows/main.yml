@@ -51,7 +51,7 @@ jobs:
       run: make
 
     - name: install cpmtools
-      run: sudo apt-get cpmtools
+      run: sudo apt-get install cpmtools
 
     - name: bdos artifact
       uses: actions/upload-artifact@v4
