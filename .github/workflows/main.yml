@@ -21,7 +21,7 @@ jobs:
       run: tar zxvf asl-current.tar.gz
 
     - name: copy defs file
-      run: cd asl-current; cp Makefile.def-x86_64-unknown-linux Makefile.def
+      run: cd asl-current; cp Makefile.def-samples/Makefile.def-x86_64-unknown-linux Makefile.def
 
     - name: make AS
       run: cd asl-current; make
