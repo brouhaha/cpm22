@@ -32,6 +32,9 @@ jobs:
     - name: install texlive-latex-extra
       run: sudo apt-get install texlive-latex-extra
 
+    - name: install texlive-lang-german
+      run: sudo apt-get install texlive-lang-german
+
     - name: download AS
       run: wget http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current.tar.gz
   
