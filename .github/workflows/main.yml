@@ -64,10 +64,3 @@ jobs:
       with:
         name: ccp-44k.p
         path: ccp-44k.p
-
-    - name: as.pdf artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: as.pdf
-        path: as.pdf  
-  
