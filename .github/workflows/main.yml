@@ -47,4 +47,5 @@ jobs:
     - name: make AS
       run: cd asl-current; make binaries; sudo make install
 
-
+    - name: make cp/m
+      run: make
