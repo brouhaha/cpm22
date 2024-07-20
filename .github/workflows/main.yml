@@ -65,17 +65,24 @@ jobs:
     - name: bdos artifact
       uses: actions/upload-artifact@v4
       with:
-        name: bdos-44k.p
-        path: bdos-44k.p
+        name: bdos-44k.bin
+        path: bdos-44k.bin
+
+    - name: bdos lst
+      uses: actions/upload-artifact@v4
+      with:
+        name: bdos-44k.lst
+        path: bdos-44k.lst
 
     - name: ccp artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ccp-44k.p
-        path: ccp-44k.p
+        name: ccp-44k.bin
+        path: ccp-44k.bin
 
-    - name: cpm.img
+    - name: ccp lst
       uses: actions/upload-artifact@v4
       with:
-        name: cpm.img
-        path: cpm.img
+        name: ccp-44k.lst
+        path: ccp-44k.lst
+  
