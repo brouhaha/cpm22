@@ -16,6 +16,8 @@ Originally much of CP/M was written in the PL/M programming language.
 With the introduction of CP/M 2.0, the command processor (CCP) and kernel
 (BDOS) were rewritten in 8080 assembly language.
 
+## Building
+
 The Digital Research ASM80 assembler allowed code to be written with
 mulitple assembly language instructions per line, separated by an
 exclamation mark ("!"). Although a semicolon (";") was used to introduce
@@ -27,7 +29,7 @@ There are two problems with this syntax:
 
 * Few if any assemblers other than DRI's ASM80 support this syntax.
 
-This repository contains the CP/M 2.2 CCP adn BDOS source code, reformatted
+This repository contains the CP/M 2.2 CCP and BDOS source code, reformatted
 to cross-assemble with Macro Assembler AS:
 
     http://john.ccac.rwth-aachen.de:8000/as/
