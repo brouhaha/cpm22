@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: apt-get update
+      run: sudo apt-get update
+
+    # its a total mess to install tex, but AS needs it  
+    - name: install texlive
+      run: sudo apt-get install texlive
+
+    - name: install pdflatex
+      run: sudo apt-get install texlive-latex-base
+
+    - name: install texlive-fonts-extra
+      run: sudo apt-get install texlive-fonts-extra
+
+    - name: install texlive-fonts-recommended
+      run: sudo apt-get install texlive-fonts-recommended
+
+    - name: install texlive-latex-extra
+      run: sudo apt-get install texlive-latex-extra
+
+    - name: install texlive-lang-german
+      run: sudo apt-get install texlive-lang-german
+
+    # get AS
+    - name: download AS
+      run: wget http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current.tar.gz
+  
+    - name: extract AS
+      run: tar zxvf asl-current.tar.gz
+
+    # we're linux
+    - name: copy defs file
+      run: cd asl-current; cp Makefile.def-samples/Makefile.def-x86_64-unknown-linux Makefile.def
+
+    # make the AS assembler
+    - name: make AS
+      run: cd asl-current; make binaries; sudo make install
+
+    # make CP/M
+    - name: make cp/m
+      run: make
+
+    - name: bdos artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: bdos-44k.bin
+        path: bdos-44k.bin
+
+    - name: bdos lst
+      uses: actions/upload-artifact@v4
+      with:
+        name: bdos-44k.lst
+        path: bdos-44k.lst
+
+    - name: ccp artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ccp-44k.bin
+        path: ccp-44k.bin
+
+    - name: ccp lst
+      uses: actions/upload-artifact@v4
+      with:
+        name: ccp-44k.lst
+        path: ccp-44k.lst
+  
+    - name: install cpmtools
+      run: sudo apt-get install cpmtools
+  
+    - name: make image file
+      run: dd if=/dev/zero of=cpm.img bs=720k count=1
+
+    - name: format image to cpm
+      run: mkfs.cpm -f cpm86-720 cpm.img
+
+    - name: ls
+      run: ls -lat
